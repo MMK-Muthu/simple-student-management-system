@@ -450,13 +450,25 @@ body {
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.student-id {
+.delete-icon {
+  width: 32px;
+  height: 32px;
   background: rgba(255, 255, 255, 0.2);
   color: var(--white);
-  padding: 4px 10px;
-  border-radius: 15px;
-  font-size: 0.8rem;
-  font-weight: 500;
+  border: none;
+  border-radius: 50%;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition);
+}
+
+.delete-icon:hover {
+  background: var(--accent-coral);
+  transform: scale(1.1);
 }
 
 .card-body {
@@ -521,6 +533,7 @@ body {
 .btn-edit {
   background: var(--background-light);
   color: var(--primary);
+  width: 100%;
 }
 
 .btn-edit:hover {
@@ -528,15 +541,6 @@ body {
   color: var(--white);
 }
 
-.btn-delete {
-  background: var(--background-light);
-  color: var(--accent-coral);
-}
-
-.btn-delete:hover {
-  background: var(--accent-coral);
-  color: var(--white);
-}
 
 /* Edit Form in Card */
 .edit-form {

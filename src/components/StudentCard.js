@@ -71,7 +71,9 @@ const StudentCard = ({ student, onDelete, onEdit }) => {
         <div className="student-avatar">
           {student.name.charAt(0).toUpperCase()}
         </div>
-        <div className="student-id">#{student.id}</div>
+        <button className="delete-icon" onClick={() => onDelete(student.id)} title="Delete Student">
+          ✕
+        </button>
       </div>
       <div className="card-body">
         <h3 className="student-name">{student.name}</h3>
@@ -91,9 +93,6 @@ const StudentCard = ({ student, onDelete, onEdit }) => {
       <div className="card-actions">
         <button className="btn-edit" onClick={() => setIsEditing(true)}>
           ✏️ Edit
-        </button>
-        <button className="btn-delete" onClick={() => onDelete(student.id)}>
-          🗑️ Delete
         </button>
       </div>
     </div>
